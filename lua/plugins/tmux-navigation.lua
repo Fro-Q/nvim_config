@@ -7,7 +7,6 @@ return {
 				down = "<C-j>",
 				up = "<C-k>",
 				right = "<C-l>",
-				previous = "<C-\\>",
 				next = "<C-Space>",
 			},
 			-- cycle_navigation = true,

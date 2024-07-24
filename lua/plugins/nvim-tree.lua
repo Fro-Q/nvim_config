@@ -87,7 +87,6 @@ return {
 			hijack_cursor = true,
 			view = {
 				width = 30,
-				auto_resize = true,
 				relativenumber = false,
 			},
 			-- change folder arrow icons
