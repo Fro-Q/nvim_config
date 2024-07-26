@@ -82,7 +82,7 @@ return {
 					t = "T",
 				},
 				mode_colors = {
-					n = "maroon",
+					n = "rosewater",
 					i = "green",
 					v = "sky",
 					V = "sky",
@@ -116,7 +116,7 @@ return {
 		}
 
 		-- surround the ViMode with some characters
-		ViMode = utils.surround({ "█", "█" }, "surface2", { ViMode })
+		ViMode = utils.surround({ "█", "█" }, "overlay0", { ViMode })
 
 		-- filename block
 		local FileNameBlock = {
@@ -448,7 +448,7 @@ return {
 				return conditions.buffer_matches({ buftype = { "terminal" } })
 			end,
 
-			hl = { bg = "dark_red" },
+			hl = { bg = "surface0" },
 
 			-- Quickly add a condition to the ViMode to only show it when buffer is active!
 			{ condition = conditions.is_active, ViMode, Space },
@@ -462,9 +462,15 @@ return {
 
 			hl = function()
 				if conditions.is_active() then
-					return "StatusLine"
+					return {
+						bg = "surface1",
+						fg = "text",
+					}
 				else
-					return "StatusLineNC"
+					return {
+						bg = "surface0",
+						fg = "text",
+					}
 				end
 			end,
 

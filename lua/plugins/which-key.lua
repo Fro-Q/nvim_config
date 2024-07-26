@@ -11,6 +11,10 @@ return {
 			{ "<leader>f", desc = "Fuzzy Finder" },
 			{ "<leader>d", desc = "Diagnostics" },
 			{ "<leader>s", desc = "Splits" },
+			{ "<leader>h", desc = "Gitsigns" },
+			{ "<leader>b", desc = "Buffers" },
+			{ "<leader>t", desc = "Terminal" },
+			{ "<leader>x", desc = "Troubles" },
 		},
 	},
 }

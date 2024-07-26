@@ -34,7 +34,6 @@ return {
 				operators = {},
 			},
 			color_overrides = {},
-			custom_highlights = {},
 			default_integrations = true,
 			integrations = {
 				cmp = true,
@@ -48,6 +47,11 @@ return {
 				mason = true,
 				neotree = true,
 			},
+			custom_highlights = function(C)
+				return {
+					WinSeparator = { fg = C.surface0 },
+				}
+			end,
 		})
 
 		vim.cmd("colorscheme catppuccin")

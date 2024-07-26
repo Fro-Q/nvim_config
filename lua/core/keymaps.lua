@@ -2,6 +2,12 @@ vim.g.mapleader = " "
 
 local key = vim.keymap
 
+key.set("n", "<leader>w", ":w<cr>", { desc = "Save file" })
+key.set("n", "<leader>W", function()
+	vim.cmd("w")
+	vim.cmd("bdelete")
+end, { desc = "Save file and close buffer" })
+
 -- insert mode
 key.set("i", "jk", function()
 	if require("cmp").visible() then
@@ -46,7 +52,7 @@ key.set("n", "<leader>bg", function()
 end, { desc = "Buffer picker" })
 
 -- open neo-tree
-vim.keymap.set("n", "<leader>e", function()
+key.set("n", "<leader>e", function()
 	-- vim.cmd("Neotree focus toggle filesystem left")
 	vim.cmd([[
     Neotree focus toggle filesystem left
@@ -54,7 +60,7 @@ vim.keymap.set("n", "<leader>e", function()
   ]])
 end, { desc = "Toggle file explorer" }) -- toggle file explorer
 
-vim.keymap.set("n", "<leader>`", function()
+key.set("n", "<leader>`", function()
 	vim.cmd("Neotree focus toggle document_symbols right")
 end, { desc = "Toggle document symbols" }) -- toggle document symbols
 
@@ -76,9 +82,9 @@ key.set("n", "+", "<C-x>", { desc = "Decrease number under cursor" })
 -- end, { desc = "Format file or range (in visual mode)" })
 
 -- lint file
-key.set("n", "<leader>l", function()
-	require("lint").try_lint()
-end, { desc = "Trigger linting for current file" })
+-- key.set("n", "<leader>l", function()
+-- 	require("lint").try_lint()
+-- end, { desc = "Trigger linting for current file" })
 
 -- open terminal
 key.set(
