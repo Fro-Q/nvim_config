@@ -4,6 +4,7 @@ return {
 	version = "*",
 	opts = {
 		options = {
+			-- mode = "tabs",
 			diagnostics = "nvim_lsp",
 			diagnostics_indicator = function(count, level)
 				local icon = level:match("error") and " " or ""
@@ -19,7 +20,7 @@ return {
 					filetype = "NvimTree",
 					text = "File Explorer",
 					highlight = "Directory",
-					text_align = "left",
+					text_align = "center",
 				},
 			},
 			color_icons = true,

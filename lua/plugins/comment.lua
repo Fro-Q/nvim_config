@@ -21,8 +21,8 @@ return {
 				extra = true,
 			},
 			toggler = {
-				line = "gcc",
-				block = "gbc",
+				line = "<leader>/",
+				block = "gc",
 			},
 			opleader = {
 				line = "gc",

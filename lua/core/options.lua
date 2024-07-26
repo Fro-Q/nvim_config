@@ -1,5 +1,8 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
+-- triggers CursorHold event faster
+vim.opt.updatetime = 200
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
